@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "todo": "Palestra",
+      "done": true
+    },
+    {
+      "id": 2,
+      "todo": "Esercizio",
+      "done": true
+    },
+    {
+      "id": 3,
+      "todo": "Preparare la Cena",
+      "done": true
+    },
+    {
+      "id": 4,
+      "todo": "Finire l'esercizio",
+      "done": true
+    },
+    {
+        "id": 5,
+        "todo": "Dormire",
+        "done": true
+      }
+  ]
