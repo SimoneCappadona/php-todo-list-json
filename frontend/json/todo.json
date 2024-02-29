@@ -2,26 +2,26 @@
     {
       "id": 1,
       "todo": "Palestra",
-      "done": true
+      "done": false
     },
     {
       "id": 2,
       "todo": "Esercizio",
-      "done": true
+      "done": false
     },
     {
       "id": 3,
       "todo": "Preparare la Cena",
-      "done": true
+      "done": false
     },
     {
       "id": 4,
       "todo": "Finire l'esercizio",
-      "done": true
+      "done": false
     },
     {
         "id": 5,
         "todo": "Dormire",
-        "done": true
+        "done": false
       }
   ]
