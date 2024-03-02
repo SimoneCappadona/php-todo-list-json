@@ -1,15 +1,40 @@
 const { createApp } = Vue;
 
 const app = createApp({
-  data: () => ({
-    list: []
-}),
-  created() {
-    axios.get("http://localhost/php-todo-list-json/frontend/json/todo.json").then(response => {
-        this.list = response.data
-    })
+  data() {
+    return {
+      todo: [],
+      newItemTodo: {
+        text: "",
+        done: false
+    }
+};
   },
-});
+  methods: {
+    addItem() {
+      const todo = this.newItemTodo.text;
+      this.newItemTodo.text = '';
 
+      const data = { todo: todo };
+
+      const params = {
+          headers: { 'Content-Type': 'multipart/form-data' },
+      }
+      fetchList() 
+        axios.get('../backend/data.php').then((response) => {
+            this.todo = response.data;
+        });  
+      axios.post("../backend/data.php", data, params).then((response) => {
+          this.todo = response.data;
+
+      });
+
+  },
+
+},
+mounted() {
+  this.fetchList();
+},
+});
 
 app.mount("#app");

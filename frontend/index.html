@@ -36,12 +36,19 @@
             <div class="card mt-5">
                 <div class="card-body">
                     <h1 class="card-title text-center m-3">To Do List</h1>
+                    <form id="form" @submit.prevent="createNewItem" method="POST">
                     <div class="d-flex gap-3 m-5">
-                        <input type="text" class="form-control" placeholder="Aggiungi nuova voce">
-                        <button class=" btn btn-primary" type="button" id="button-add">Aggiungi</button>
+                        <input 
+                        v-model="newItemTodo.text" 
+                        @keyUp.enter="addItem()" 
+                        type="text" 
+                        class="form-control" 
+                        placeholder="Aggiungi Nuova Voce">
+                        <button @click="addItem()" class="btn btn-success" type="submit" id="add-todo">Aggiungi</button>
                     </div>
+                </form>
                     <ul class="list-group list-group-flush">
-                        <li v-for="task in list" :key="task.id" class="list-group-item">{{ task.todo }}</li>
+                        <li class="list-group-item" v-for="todo in todo">{{ todo.text }}</li>
                     </ul>
                 </div>
             </div>
