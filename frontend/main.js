@@ -12,27 +12,27 @@ const app = createApp({
   },
   methods: {
     addItem() {
-      const todo = this.newItemTodo.text;
+      const todol = this.newItemTodo.text;
       this.newItemTodo.text = '';
 
-      const data = { todo: todo };
+      const data = { todo: todol };
 
       const params = {
-          headers: { 'Content-Type': 'multipart/form-data' },
+        headers: { 'Content-Type': 'multipart/form-data' },
       }
       fetchList() 
-        axios.get('../backend/data.php').then((response) => {
-            this.todo = response.data;
-        });  
-      axios.post("../backend/data.php", data, params).then((response) => {
-          this.todo = response.data;
-
+      axios.get('../backend/data.php').then((response) => {
+        this.todo = response.data;
+      });  
+      axios.post("../backend/todo.php", data, params).then((response) => {
+        this.todo = response.data;
+        
       });
-
+      
+    },
+    
   },
-
-},
-mounted() {
+  mounted() {
   this.fetchList();
 },
 });

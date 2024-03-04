@@ -1,22 +1,22 @@
 [
     {
         "text": "Palestra",
-        "done": true
+        "done": false
     },
     {
         "text": "Esercizio",
-        "done": true
+        "done": false
     },
     {
         "text": "Preparare la Cena",
-        "done": true
+        "done": false
     },
     {
         "text": "Finire l'esercizio",
-        "done": true
+        "done": false
     },
     {
         "text": "Dormire",
-        "done": true
+        "done": false
     }
 ]
